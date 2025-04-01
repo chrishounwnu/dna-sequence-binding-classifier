@@ -43,6 +43,7 @@ Final predictions are made using a **weighted average** of the two models:
 
 ```python
 final_pred = alpha * preds_cnn_only + (1 - alpha) * preds_cnn_kmeans
+```
 
 > Example: With `alpha = 0.715`, the ensemble achieved **75.67% accuracy**.
 
