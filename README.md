@@ -41,7 +41,8 @@ Both outputs are concatenated and passed through an MLP for classification.
 
 Final predictions are made using a **weighted average** of the two models:
 
-$$\texttt{final\_pred} = \alpha \cdot \texttt{preds\_cnn\_only} + (1 - \alpha) \cdot \texttt{preds\_cnn\_kmeans}$$
+```python
+final_pred = alpha * preds_cnn_only + (1 - alpha) * preds_cnn_kmeans
 
 > Example: With `alpha = 0.715`, the ensemble achieved **75.67% accuracy**.
 
